@@ -89,11 +89,8 @@ else
             <string>x = mouse_x// + view_xview[0];
 y = mouse_y// + view_yview[0];
 
+draw_sprite(sprite_index,image_index,x,y);
 
-if ( view_current == 1 )
-{
-  draw_sprite(sprite_index,image_index,x,y);
-}
 </string>
           </argument>
         </arguments>

@@ -7,8 +7,8 @@ image_speed = 0;
 pause= 0;
 //How long to wait to unfreeze
 alarm[0] = argument0;
-//Freeze the screen.  We need at least 1 step to draw the screen to the surface
-//then we will copy to the sprites ELSE it will just be blank.
+//Draw a lovely black box around the screen to ease the transition.
+//This is done in the draw gui so as not to upset the application surface that we copy.
 alarm[1] = 2; 
 start_x = x;
 start_y = y;

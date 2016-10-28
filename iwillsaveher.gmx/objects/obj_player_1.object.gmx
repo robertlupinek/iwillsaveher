@@ -73,7 +73,9 @@ scp_player_create();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scp_player_end_step();
+            <string>//if ( !global.pause_select ){
+  scp_player_end_step();
+//}
 </string>
           </argument>
         </arguments>
@@ -96,7 +98,9 @@ scp_player_create();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scp_player_step();
+            <string>//if ( !global.pause_select ){
+  scp_player_step();
+//}
 
 
 </string>

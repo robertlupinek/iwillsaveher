@@ -1,6 +1,14 @@
 //Reset the display since it fixes interpolation issues with scaling etc
 display_reset(0,false);
 
+window_set_size(800,480);
+
+//The pause event resizes this sucker down again before making a 
+//sprite out of it and then sizes it back up.
+surface_resize(application_surface,800,480)
+display_set_gui_size(800, 480);
+
+
 //Turn music on and off
 global.music = false;
 
@@ -16,7 +24,8 @@ global.keyboard = true;
 //Grid game play?
 global.grid = false;
 
-
+//Is the game paused for selection?
+global.pause_select = 0;
 
 //Do players auto target?
 global.auto_target = true;
@@ -34,7 +43,7 @@ global.level_max = 12;
 global.p_selected[0] = 1;
 global.p_selected[1] = 1;
 global.p_selected[2] = 0;
-global.p_selected_last = 0;
+
 
 
 

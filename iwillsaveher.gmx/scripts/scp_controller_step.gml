@@ -52,6 +52,19 @@ if ( keyboard_check_pressed(ord('N') ) )
 
 //Key presses 
 
+if ( keyboard_check_pressed(ord('P') ) )
+{
+  //Create the pause selection object and pause the screen
+  if ( !instance_exists(obj_pause_select) ){
+    tmp_pause = instance_create(x,y,obj_pause_select);
+    with(tmp_pause){scp_pause_select_freeze_unfreeze(1);}
+  }
+  else{
+    with(tmp_pause){scp_pause_select_freeze_unfreeze(0);}  
+  }
+}
+
+
 if ( keyboard_check(ord('Z') ) )
 {
     with(obj_button_p1){script_execute(button_script);}

@@ -69,19 +69,6 @@
           <sprite>sprites\spr_player_3_c</sprite>
           <sprite>sprites\spr_player_3_s</sprite>
         </sprites>
-        <sprites name="unused">
-          <sprite>sprites\spr_player_f_a</sprite>
-          <sprite>sprites\spr_player_cs_a</sprite>
-          <sprite>sprites\spr_player_c_a</sprite>
-          <sprite>sprites\spr_player_j_a</sprite>
-          <sprite>sprites\spr_player_w_a</sprite>
-          <sprite>sprites\spr_player_j_old</sprite>
-          <sprite>sprites\spr_player_f</sprite>
-          <sprite>sprites\spr_player_1</sprite>
-          <sprite>sprites\spr_player_delete</sprite>
-          <sprite>sprites\spr_player_1_s_a</sprite>
-        </sprites>
-        <sprite>sprites\spr_player_example</sprite>
       </sprites>
     </sprites>
     <sprites name="enemy">
@@ -294,6 +281,7 @@
       <script>scripts\scp_player_next_level.gml</script>
       <scripts name="mp">
         <script>scripts\scp_player_mp_move.gml</script>
+        <script>scripts\scp_player_mp_calculate_path.gml</script>
       </scripts>
       <scripts name="spells">
         <script>scripts\scp_attack_normal.gml</script>
@@ -371,11 +359,18 @@
       <script>scripts\scp_pause_draw.gml</script>
       <script>scripts\scp_pause_reset.gml</script>
     </scripts>
+    <scripts name="pause_select">
+      <script>scripts\scp_pause_select_create.gml</script>
+      <script>scripts\scp_pause_select_reset.gml</script>
+      <script>scripts\scp_pause_select_freeze_unfreeze.gml</script>
+      <script>scripts\scp_pause_select_draw.gml</script>
+    </scripts>
     <scripts name="room_transitions">
       <script>scripts\scp_transition_reset.gml</script>
       <script>scripts\scp_transition_create.gml</script>
       <script>scripts\scp_transition_draw.gml</script>
       <script>scripts\scp_transition_freeze_unfreeze.gml</script>
+      <script>scripts\scp_transition_draw_gui.gml</script>
     </scripts>
     <scripts name="effects">
       <script>scripts\scp_enter_door_way.gml</script>
@@ -427,6 +422,7 @@
       <object>objects\obj_selection_thingy</object>
       <object>objects\obj_start_controller</object>
       <object>objects\obj_camera</object>
+      <object>objects\obj_pause_select</object>
     </objects>
     <objects name="button">
       <object>objects\obj_button</object>
@@ -445,9 +441,9 @@
     </objects>
     <objects name="effects">
       <objects name="particles">
-        <object>objects\obj_e_spark</object>
         <object>objects\obj_ice_chunk</object>
         <object>objects\obj_spark_line</object>
+        <object>objects\obj_e_spark</object>
         <object>objects\obj_wind_particle</object>
         <object>objects\obj_chunk</object>
         <objects name="smoke">
@@ -509,6 +505,7 @@
     <room>rooms\rm_start</room>
     <room>rooms\rm_start_menu</room>
     <room>rooms\rm_multipath_template</room>
+    <room>rooms\room5</room>
     <room>rooms\rm_grid_template</room>
     <room>rooms\room15</room>
   </rooms>

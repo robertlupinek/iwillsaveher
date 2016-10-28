@@ -5,11 +5,10 @@ x = start_x + view_xview[0];
 y = start_y + view_yview[0];
 
 if ( pause == 1 ){
-  if ( view_current == 1 )
-  {
+
     //We use a sprite because surfaces are volatile.
     //For example, a minimize will destroy it.
-    draw_sprite(screen_sprite,image_index,0,0);
+    draw_sprite_ext(screen_sprite,image_index,view_xview[0],view_yview[0],0.5,0.5,0,c_white,1);
     
     //This is the effect for level end.
     if ( level_start == 0){
@@ -40,15 +39,7 @@ if ( pause == 1 ){
         }
       }    
     }
-  }
 } 
-//Draw some darkness before transtioning in at level start
-//For this to work the depth must always be less than the pause.
-//The pause will draw the view[0] surface right over this one otherwise.
-else if ( level_start == 1 && view_current == 1 ) {
-      draw_set_color(c_black);
-      draw_set_alpha(1);
-      draw_rectangle(view_xview[1], view_yview[1],view_wview[1],view_hview[1],false);
-}
+
 
 draw_set_alpha(1); 

@@ -1,7 +1,9 @@
+//Creates and array of objects of a certain type.
+
 //Reset the array
 tmp_array = 0;
 
-//Arguement 0 should be the parent object that identifies an object as an enemy.
+//Arguement 0 should be the parent or object that identifies an object to be added to the array.
 tmp_target = argument0;
 
 for(i = 0; i < instance_count; i += 1;)
