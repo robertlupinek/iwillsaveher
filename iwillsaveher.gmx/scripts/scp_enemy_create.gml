@@ -30,9 +30,8 @@ target_y = y;
 move_speed= 0.75;
 
 //Sprite selection
-sprite_climb = spr_devil_dog_c;
 sprite_walk = spr_devil_dog_w;
-sprite_attack = spr_devil_dog_j;
+
 
 
 //Attacking stuff

@@ -15,12 +15,13 @@ else {
     //Activate all the blocking objects so that the line collision for the player
     //will show that there is a block to collide with.
     instance_activate_object(obj_block);
-    instance_activate_object(obj_player_parent);
     instance_activate_object(obj_controller);
     instance_activate_object(obj_selection_thingy);
-    instance_activate_object(obj_camera);
-    
-    obj_player_parent.depth = -10000001
+    instance_activate_object(obj_player_parent);
+    //instance_activate_object(obj_camera);
+    if ( instance_exists(obj_player_parent) ){
+      obj_player_parent.depth = -10000001
+    }
     obj_controller.depth = -10000002
 }
 

@@ -81,13 +81,11 @@ player_offset_x = 0;
 player_offset_y = 0;
 
 sprite_walk = spr_player_1_w;
-sprite_climb = spr_player_1_c;
-sprite_climb_still = spr_player_1_cs;
 sprite_stand_still = spr_player_1_s;
 
 
 //Create the wand
-my_wand = instance_create(x,y,obj_player_1_wand);
+//my_wand = instance_create(x,y,obj_player_1_wand);
 
 //image_xscale will scale the bbox breaking collisions
 xscale = 1;

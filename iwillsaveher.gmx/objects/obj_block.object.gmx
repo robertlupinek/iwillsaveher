@@ -48,7 +48,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scp_block_auto_tile();
+            <string>scp_block_auto_tile(-y);
 </string>
           </argument>
         </arguments>

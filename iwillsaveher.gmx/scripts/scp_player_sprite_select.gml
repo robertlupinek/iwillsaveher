@@ -5,27 +5,24 @@ image_speed = 0.25;
 
 
 //Moving
-if ( ( path_speed && path_index != -1 ) )
-{
-  //Change the xscale based upon move direction only if no enemy is targeted.
-  //We want to use the xscale set based on direction to enemy if we have an enemy
-  //in sites.
-  if ( !enemy_target ){
-    scp_set_xscale();
-  }
-
+if ( path_speed && path_index != -1  ) {
   tmp_sprite = sprite_walk; 
+  scp_set_xscale();
+  image_speed = 0.35;
 }
-else 
-{ 
+else{ 
     tmp_sprite = sprite_stand_still;
 }
 
 
 //Set xscale for  if holding down the mouse...
-if ( obj_controller.player_id == id && mouse_check_button(mb_left) && mouse_y < 192 ){//Set the mouse coordinates as the target
-  target_x = mouse_x + view_xview[0];
+if ( mouse_check_button(mb_left) && mouse_y < 192 ){//Set the mouse coordinates as the target
+  target_x = mouse_x;
   if target_x > x then xscale = 1 else xscale = -1;
 }
 
+depth = -y;
+
 return tmp_sprite;
+
+

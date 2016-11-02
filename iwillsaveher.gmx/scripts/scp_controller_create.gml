@@ -2,9 +2,9 @@ game_state = 0;
 my_selection_thingy = instance_create(mouse_x,mouse_y,obj_selection_thingy);
 //Set the key stone counter to 0 :)
 global.key_stone = 0;
-
 //Set the combo counter
 global.combo = 0;
+
 
 //Which player was selected
 player_selected = 0;

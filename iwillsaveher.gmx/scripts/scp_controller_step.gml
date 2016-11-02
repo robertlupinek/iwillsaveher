@@ -50,20 +50,27 @@ if ( keyboard_check_pressed(ord('N') ) )
 
 
 
-//Key presses 
 
-if ( keyboard_check_pressed(ord('P') ) )
-{
+//Freeze the game on mouse button press
+//The following objects remain active:
+//obj_player, obj_controller
+
+if ( mouse_check_button_pressed(mb_left) || mouse_check_button_pressed(mb_right) ) {
   //Create the pause selection object and pause the screen
   if ( !instance_exists(obj_pause_select) ){
     tmp_pause = instance_create(x,y,obj_pause_select);
-    with(tmp_pause){scp_pause_select_freeze_unfreeze(1);}
+    with(obj_pause_select){scp_pause_select_freeze_unfreeze(1);}
   }
-  else{
-    with(tmp_pause){scp_pause_select_freeze_unfreeze(0);}  
+}
+//Unfreeze the game
+if ( mouse_check_button_released(mb_left) || mouse_check_button_released(mb_right) ) {
+  //Create the pause selection object and pause the screen
+  if ( instance_exists(obj_pause_select) ){
+    with(obj_pause_select){scp_pause_select_freeze_unfreeze(0);}  
   }
 }
 
+//Key presses 
 
 if ( keyboard_check(ord('Z') ) )
 {

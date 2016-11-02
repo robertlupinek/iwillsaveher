@@ -38,3 +38,4 @@ if ( image_index > image_number - 3 )
   attacking = 0;
 }
 
+depth = -y;

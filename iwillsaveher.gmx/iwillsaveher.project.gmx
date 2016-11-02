@@ -42,32 +42,12 @@
       </sprites>
       <sprites name="units">
         <sprite>sprites\spr_this_player</sprite>
-        <sprites name="player2">
-          <sprite>sprites\spr_player_2_s</sprite>
-          <sprite>sprites\spr_player_2_j_u</sprite>
-          <sprite>sprites\spr_player_2_w</sprite>
-          <sprite>sprites\spr_player_2_c</sprite>
-          <sprite>sprites\spr_player_2_cs</sprite>
-          <sprite>sprites\spr_player_2_j_d</sprite>
-        </sprites>
         <sprites name="player1">
-          <sprite>sprites\spr_player_1_cs</sprite>
-          <sprite>sprites\spr_player_1_j_d</sprite>
           <sprite>sprites\spr_player_1_w</sprite>
-          <sprite>sprites\spr_player_1_j_u</sprite>
-          <sprite>sprites\spr_player_1_c</sprite>
           <sprite>sprites\spr_player_1_s</sprite>
-          <sprite>sprites\sprite97</sprite>
           <sprite>sprites\spr_player_1_wand</sprite>
           <sprite>sprites\spr_player_1_wand_a1</sprite>
-        </sprites>
-        <sprites name="player3">
-          <sprite>sprites\spr_player_3_cs</sprite>
-          <sprite>sprites\spr_player_3_w</sprite>
-          <sprite>sprites\spr_player_3_j_u</sprite>
-          <sprite>sprites\spr_player_3_j_d</sprite>
-          <sprite>sprites\spr_player_3_c</sprite>
-          <sprite>sprites\spr_player_3_s</sprite>
+          <sprite>sprites\spr_test</sprite>
         </sprites>
       </sprites>
     </sprites>
@@ -75,8 +55,6 @@
       <sprite>sprites\spr_enemy</sprite>
       <sprites name="devil_dog">
         <sprite>sprites\spr_devil_dog_w</sprite>
-        <sprite>sprites\spr_devil_dog_j</sprite>
-        <sprite>sprites\spr_devil_dog_c</sprite>
       </sprites>
       <sprite>sprites\spr_enemy_door</sprite>
       <sprites name="floating_eye">
@@ -88,7 +66,6 @@
       </sprites>
       <sprites name="purple_slime">
         <sprite>sprites\spr_purple_slime_w</sprite>
-        <sprite>sprites\spr_purple_slime_j</sprite>
       </sprites>
       <sprites name="projectiles">
         <sprite>sprites\spr_projectiles</sprite>
@@ -221,7 +198,6 @@
   <backgrounds name="background">
     <background>background\bg_menus</background>
     <backgrounds name="level_dungeon">
-      <background>background\background2</background>
       <background>background\bg_wall_1</background>
       <background>background\bg_tiles</background>
       <background>background\background0</background>
@@ -506,7 +482,6 @@
     <room>rooms\rm_start_menu</room>
     <room>rooms\rm_multipath_template</room>
     <room>rooms\room5</room>
-    <room>rooms\rm_grid_template</room>
     <room>rooms\room15</room>
   </rooms>
   <help>
