@@ -23,6 +23,3 @@ with(my_attack){
   if range > 0 then alarm[0] = range / speed + 1 else alarm[0] = 0;
 }
 
-//Attack sprite setup
-my_wand.attack_1 = 1;
-my_wand.image_index = -1;

@@ -91,5 +91,8 @@ sprite_stand_still = spr_player_1_s;
 xscale = 1;
 yscale = 1;
 
+//Rotating the path dots
+dot_rot = 0;
+
 //Create the camera
 my_camera = instance_create(x,y,obj_camera);

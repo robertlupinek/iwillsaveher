@@ -22,7 +22,7 @@ if ( instance_exists(obj_player_1) ) {
 alarm[2] = 8;
 
 //Create bottons
-my_button_1 = instance_create(x+213,y+8,obj_button_p1);
+my_button_1 = instance_create(x+213,y+8,obj_button_spell);
 //Text variables
 xscale=1;
 yscale=1;

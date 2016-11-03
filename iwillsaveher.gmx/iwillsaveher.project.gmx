@@ -70,6 +70,7 @@
       <sprites name="projectiles">
         <sprite>sprites\spr_projectiles</sprite>
       </sprites>
+      <sprite>sprites\spr_enemy_darkoid_w</sprite>
     </sprites>
     <sprites name="blocks">
       <sprite>sprites\spr_blocks</sprite>
@@ -97,6 +98,7 @@
       <sprite>sprites\spr_hud_spell_exp_b2</sprite>
       <sprite>sprites\spr_hud_spell_exp_t</sprite>
       <sprite>sprites\spr_hud_spell_exp_t2</sprite>
+      <sprite>sprites\spr_can_walk_dot</sprite>
     </sprites>
     <sprites name="button">
       <sprite>sprites\spr_pause_button</sprite>
@@ -316,16 +318,11 @@
         <script>scripts\scp_button_create.gml</script>
         <script>scripts\scp_button_step.gml</script>
         <script>scripts\scp_button_draw.gml</script>
-        <script>scripts\scp_button_spell_step.gml</script>
         <script>scripts\scp_button_spell_draw.gml</script>
       </scripts>
       <scripts name="button_scripts">
-        <script>scripts\scp_button_spell_single.gml</script>
-        <script>scripts\scp_button_spell.gml</script>
         <script>scripts\scp_action_button_script.gml</script>
-        <script>scripts\scp_button_player_1.gml</script>
-        <script>scripts\scp_button_player_2.gml</script>
-        <script>scripts\scp_button_player_3.gml</script>
+        <script>scripts\scp_button_spell.gml</script>
         <script>scripts\scp_button_do_nothing.gml</script>
       </scripts>
     </scripts>
@@ -407,11 +404,8 @@
       <object>objects\obj_button_empty</object>
       <object>objects\obj_button_go</object>
       <objects name="in_game">
-        <object>objects\obj_button_p3</object>
         <object>objects\obj_button_action</object>
-        <object>objects\obj_button_p2</object>
-        <object>objects\obj_button_spell_multi</object>
-        <object>objects\obj_button_p1</object>
+        <object>objects\obj_button_spell</object>
         <object>objects\obj_button_pause</object>
       </objects>
     </objects>
@@ -482,7 +476,6 @@
     <room>rooms\rm_start_menu</room>
     <room>rooms\rm_multipath_template</room>
     <room>rooms\room5</room>
-    <room>rooms\room15</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

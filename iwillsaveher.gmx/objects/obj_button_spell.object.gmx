@@ -3,7 +3,7 @@
   <spriteName>spr_button_spell_sprout</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-10001</depth>
+  <depth>-10000003</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -29,6 +29,16 @@
 scp_button_create();
 //All the magic happens in the step event :)
 button_script = scp_button_spell;
+//Which spell is assigned to the button
+spell_selected = 1;
+//Set the timer for how long it will take to reload the spell.
+spell_reload = global.spell_reload[spell_selected]
+which_alarm = 6;  //Which alarm to trigger and wait for when firing
+//Which script to fire off 
+spell_script = global.spell_script[spell_selected];
+//Which sprite to use for the button
+sprite_index = global.spell_sprite[spell_selected];
+//Trigger the spell effects on button push etc.
 </string>
           </argument>
         </arguments>
@@ -74,7 +84,12 @@ button_script = scp_button_spell;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scp_button_spell_step()
+            <string>if ( instance_exists( obj_player_1 )  ) {
+  scp_button_step();
+}
+else { //Draw the empty sprite if the player seleced is no more or all players are gone...
+  sprite_index = spr_button_empty;
+}
 </string>
           </argument>
         </arguments>
@@ -98,6 +113,7 @@ button_script = scp_button_spell;
           <argument>
             <kind>1</kind>
             <string>scp_button_spell_draw();
+
 </string>
           </argument>
         </arguments>

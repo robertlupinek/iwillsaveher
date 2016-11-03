@@ -10,9 +10,9 @@ my_button_1.y = y+23;
 
 
 //Shake the player button if it is hurt
-if ( instance_exists(obj_player_1) ){
-  if obj_player_1.alarm[0] > 0 then my_button_1.x += random(2) - random(2)  ;
-}
+//if ( instance_exists(obj_player_1) ){
+//  if obj_player_1.alarm[0] > 0 then my_button_1.x += random(2) - random(2)  ;
+//}
 
 
 //If multipath movement draw the grid for debugging purposes

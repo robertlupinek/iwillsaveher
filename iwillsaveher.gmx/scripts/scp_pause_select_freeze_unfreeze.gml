@@ -18,7 +18,10 @@ else {
     instance_activate_object(obj_controller);
     instance_activate_object(obj_selection_thingy);
     instance_activate_object(obj_player_parent);
+    instance_activate_object(obj_player_parent);
+    instance_activate_object(obj_button_spell);
     //instance_activate_object(obj_camera);
+    //Set depth so the controller and player are drawn over the pause screen...
     if ( instance_exists(obj_player_parent) ){
       obj_player_parent.depth = -10000001
     }

@@ -25,6 +25,7 @@ global.spell_exp[1] = 0;
 global.spell_next_level[1] = 60; 
 global.spell_cost[1] = 1000;
 global.spell_max_ammo[1] = 120;
+
 //Global ammo so that it can be carried over between stages.
 global.spell_ammo[1] = global.spell_max_ammo[1];
 global.spell_ammo_per_level[1] = 10;

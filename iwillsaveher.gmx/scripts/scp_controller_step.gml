@@ -3,7 +3,6 @@ if ( keyboard_check_pressed(ord('R') ) )
     game_restart();
 }
 
-
 //If a coin was collected
 //do a little effect for the text for score:)
 if ( alarm[1] )
@@ -76,25 +75,9 @@ if ( keyboard_check(ord('Z') ) )
 {
     with(obj_button_p1){script_execute(button_script);}
 }
-if ( keyboard_check(ord('X') ) )
-{
-    with(obj_button_p2){script_execute(button_script);}
-}
-if ( keyboard_check_pressed(ord('C') ) )
-{
-    with(obj_button_p3){script_execute(button_script);}    
-}
-if ( keyboard_check_pressed(ord('V') ) )
-{
-    with(obj_button_spell_multi){script_execute(button_script);}    
-}
-if ( keyboard_check_pressed(ord('B') ) )
-{
-    with(obj_button_action){script_execute(button_script);}    
-}
 
 //Cast the spell!!!!
 if ( mouse_check_button_pressed(mb_right)  ){
-    with(obj_button_spell_multi){script_execute(button_script);}
+    with(obj_button_spell){script_execute(button_script);}
 }
 
