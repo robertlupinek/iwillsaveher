@@ -27,12 +27,14 @@ if ( !global.pause_select ){
 }
 
 //Draw the path the player will move in
-dot_rot += 5;
-if dot_rot > 360 then dot_rot = 0;
-for ( i = 10/path_ln; i<=1;i+= 10/path_ln ){
-  tmp_x = path_get_x(my_path, i);
-  tmp_y = path_get_y(my_path, i);
-  draw_sprite_ext(spr_can_walk_dot,-1,tmp_x,tmp_y,1,1,dot_rot,c_white,path_alpha);
+if ( path_alpha > 0 ){
+  dot_rot += 5;
+  if dot_rot > 360 then dot_rot = 0;
+  for ( i = 10/path_ln; i<=1;i+= 10/path_ln ){
+    tmp_x = path_get_x(my_path, i);
+    tmp_y = path_get_y(my_path, i);
+    draw_sprite_ext(spr_can_walk_dot,-1,tmp_x,tmp_y,1,1,dot_rot,c_white,path_alpha);
+  }
 }
 
 

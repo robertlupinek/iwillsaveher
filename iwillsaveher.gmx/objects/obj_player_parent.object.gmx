@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>//Delete your path
 path_delete(my_path);
+
 </string>
           </argument>
         </arguments>

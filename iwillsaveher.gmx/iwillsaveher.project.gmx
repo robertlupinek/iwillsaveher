@@ -475,6 +475,7 @@
     <room>rooms\rm_start</room>
     <room>rooms\rm_start_menu</room>
     <room>rooms\rm_multipath_template</room>
+    <room>rooms\room4</room>
     <room>rooms\room5</room>
   </rooms>
   <help>

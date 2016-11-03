@@ -32,23 +32,22 @@ draw_set_alpha(1);
 
 draw_sprite(spr_hud,-1,x,y);
 
-
-
 //Draw player health and level up stuff
-if ( instance_exists(player_id) && player_id != -1 )
+if ( instance_exists(obj_player_1) )
 {
-  for ( h = 0; h < player_id.hp_max; h+=1 )
+  for ( h = 0; h < obj_player_1.hp_max; h+=1 )
   {
     draw_sprite(spr_player_health,1,x+118+h*4,y+8);
   }
-  for ( h2 = 0; h2 < player_id.hp; h2+=1 )
+  for ( h2 = 0; h2 < obj_player_1.hp; h2+=1 )
   {
     draw_sprite(spr_player_health,0,x+118+h2*4,y+8);
   }
   
+  
   /////////////////////////////////////
   //Draw the spell level
-  tmp_spell = global.spell_selected[player_id.p_index];
+  tmp_spell = global.spell_selected[obj_player_1.p_index];
   spell_lvl_frame += 0.1;
   //Set how much of the level bar to show based on how close to leveling you are.
   //This is represented 0 to 1 ( precentage ) of exp vs exp for next level.
@@ -62,7 +61,7 @@ if ( instance_exists(player_id) && player_id != -1 )
   tmp_y = 42;
   draw_sprite_ext(spr_hud_spell_exp_b,spell_lvl_frame,x+tmp_x,y+tmp_y,1,1,0,c_white,1);
   draw_sprite_ext(spr_hud_spell_exp_t,-1,x+tmp_x + 41,y+tmp_y,1-tmp_lvl_percent,1,0,c_white,1);
-
+  
     
   //////////////////////////////////////////////////////////////////////////
   //Draw player level up bar and text
@@ -71,18 +70,18 @@ if ( instance_exists(player_id) && player_id != -1 )
   if lvl_frame > 20 then tmp_frame = 0;
   //Set how much of the level bar to show based on how close to leveling you are.
   //This is represented 0 to 1 ( precentage ) of exp vs exp for next level.
-  if ( global.exp_points[player_id.p_index] == 0 ){
+  if ( global.exp_points[0] == 0 ){
     tmp_lvl_percent = 0;
   }
   else{
-    tmp_lvl_percent = global.exp_points[player_id.p_index] / player_id.exp_next;
+    tmp_lvl_percent = global.exp_points[0] / obj_player_1.exp_next;
   }
   draw_sprite(spr_hud_exp_bar_b,lvl_frame,x+121,y+26);
   draw_sprite_ext(spr_hud_exp_bar_t,lvl_frame,x+201,y+26,1-tmp_lvl_percent,1,0,c_white,1);
   draw_set_color(c_white);
   draw_set_halign(fa_left);
   draw_set_font(global.font_white);
-  tmp_lvl_text = "LEVEL" + string(global.level[player_id.p_index]);
+  tmp_lvl_text = "LEVEL" + string(global.level[0]);
   draw_text(x+125,y + 20,tmp_lvl_text);
 }
 else
@@ -93,12 +92,13 @@ else
   }
 }
 
+
+
 //Draw money
 draw_set_halign(fa_left);
 draw_set_color(c_white);
 draw_set_font(global.font_score);
 draw_text_transformed(x + 10,y + 8, "$" + string(global.points),xscale,yscale,angle );
-
 
 
 

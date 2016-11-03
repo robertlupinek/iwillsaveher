@@ -3,6 +3,13 @@ if ( keyboard_check_pressed(ord('R') ) )
     game_restart();
 }
 
+if ( keyboard_check_pressed(ord('N') ) )
+{
+    room_goto_next();
+}
+
+
+depth = -10005; 
 //If a coin was collected
 //do a little effect for the text for score:)
 if ( alarm[1] )
@@ -25,16 +32,7 @@ if ( global.grid ){
   scp_controller_grid_move();
 }
 
-
 //Trigger actions
-
-//If the selected player is no more then we should deselect them...
-if ( !instance_exists( player_id ) )
-{
-  obj_controller.player_selected = 0;
-  //Set the icon for the mouse
-  obj_controller.my_selection_thingy.state = 0;  
-}
 
 //Game over
 if ( !instance_exists(obj_player_parent) )
@@ -46,9 +44,6 @@ if ( keyboard_check_pressed(ord('N') ) )
 {
     instance_create(x,y,obj_transition_blocks);
 }
-
-
-
 
 //Freeze the game on mouse button press
 //The following objects remain active:
@@ -80,4 +75,6 @@ if ( keyboard_check(ord('Z') ) )
 if ( mouse_check_button_pressed(mb_right)  ){
     with(obj_button_spell){script_execute(button_script);}
 }
+
+
 

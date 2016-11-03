@@ -100,10 +100,11 @@ scp_transition_freeze_unfreeze(1);
             <string>//Unfreeze 
 scp_transition_freeze_unfreeze(0);
 scp_transition_reset();
-//Goto next room if this is the end of the level...
-if level_start == 0 then room_goto_next();
 //Destroy self if this is the start of the level...
 if level_start == 1 then instance_destroy();
+//Goto next room if this is the end of the level...
+if level_start == 0 then room_goto_next();
+
 </string>
           </argument>
         </arguments>

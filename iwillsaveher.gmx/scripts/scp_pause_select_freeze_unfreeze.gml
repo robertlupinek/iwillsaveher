@@ -2,6 +2,10 @@
 global.pause_select = argument[0];
 
 if  ( global.pause_select == 0 ){
+    //Deactivating all objects before activating them is required for HTML5 to handle
+    //depth properly for some horrible reason.
+    instance_deactivate_all(true);
+    //Activate all instances.
     instance_activate_all();
     scp_pause_select_reset();
     instance_destroy();
@@ -18,13 +22,8 @@ else {
     instance_activate_object(obj_controller);
     instance_activate_object(obj_selection_thingy);
     instance_activate_object(obj_player_parent);
-    instance_activate_object(obj_player_parent);
     instance_activate_object(obj_button_spell);
     //instance_activate_object(obj_camera);
-    //Set depth so the controller and player are drawn over the pause screen...
-    if ( instance_exists(obj_player_parent) ){
-      obj_player_parent.depth = -10000001
-    }
-    obj_controller.depth = -10000002
+
 }
 
