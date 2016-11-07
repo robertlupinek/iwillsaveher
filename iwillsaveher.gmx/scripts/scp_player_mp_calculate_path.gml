@@ -21,8 +21,16 @@ if ( !scp_line_collision(x,y,tmp_target_x,tmp_target_y,obj_block,4) ){
   
 }
 else {
-  //Set the path my_path to path found IF one was found
-  tmp_path_results = mp_grid_path(global.mp_grid, my_path, x, y, tmp_target_x, tmp_target_y, true);
+  //Check to see if the target location is accessible.
+  //Do not target a location that is in a wall :).
+  if ( place_meeting(tmp_target_x, tmp_target_y,obj_block) ){
+    //path_delete_point(my_path,path_get_number(my_path) - 1);
+    tmp_path_results = -1;
+  }
+  else {
+    //Set the path my_path to path found IF one was found
+    tmp_path_results = mp_grid_path(global.mp_grid, my_path, x, y, tmp_target_x, tmp_target_y, true);
+  }
 }
 
 

@@ -6,13 +6,8 @@
 scp_player_mp_move();
 
 //Only peform the movement code if the game is paused....
-if ( global.pause_select ){
-  //Set depth so the controller and player are drawn over the pause screen...
-  obj_player_parent.depth = -10001;
-  obj_controller.depth = -10005;
-  obj_button_spell.depth = 10006;
+if ( !global.pause_select ){
   
-}else {
 
   //KO if out of hp
   if ( hp <= 0 )

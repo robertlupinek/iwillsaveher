@@ -24,3 +24,9 @@ if (  mouse_check_button_released(mb_left) || mouse_check_button_released(mb_rig
 }
 //Make the dotted line disappear..
 path_alpha -= 0.1;
+
+//End path on wall collision
+//if ( place_meeting(x,y,obj_block) ){
+//  path_position = path_positionprevious;
+//  path_end();
+//}
